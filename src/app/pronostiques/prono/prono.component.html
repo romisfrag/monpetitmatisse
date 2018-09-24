@@ -1,14 +1,16 @@
 <div>
-  <H3>{{ prono.intitule}}</H3>
+  <H3>{{ prono.intitule}} </H3>
   <div>
-    <ul>
-      <li *ngFor="let elem of prono.propositions; let i = index" >
+    <ul class="list-group">
+      <li *ngFor="let elem of prono.propositions; let i = index" class="list-group-item">
         <!-- Il faut specifier le name afin que l'on puisse dire que les radio appartiennent au meme groupe et n'autorise
         qu'une seule selection -->
-        <input type="radio" name="choix" (click)="onSelectRadio(i)">
-        <app-proposition [proposition]="elem"></app-proposition>
+        <div>
+          <input type="radio" name="choix" (click)="onSelectRadio(i)">
+          <app-proposition [proposition]="elem"></app-proposition>
+        </div>
       </li>
     </ul>
-    <input type="button" (click)="submitProno()" value="Valider">
+    <input class="btn btn-primary" type="button" (click)="submitProno()" value="Valider" >
   </div>
 </div>

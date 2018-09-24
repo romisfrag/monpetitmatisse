@@ -1,0 +1,15 @@
+<div>
+  <H3>{{ prono.intitule}} </H3>
+  <div>
+    <ul class="list-group">
+      <li *ngFor="let elem of prono.propositions; let i = index" class="list-group-item">
+        <p *ngIf="isThisTheAnswerDone(elem)" class="done">
+          {{ elem.reponse}}
+        </p>
+        <p *ngIf="!isThisTheAnswerDone(elem)">
+         {{ elem.reponse}}
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>

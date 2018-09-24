@@ -3,9 +3,9 @@
       <h2>Vos Pronos</h2>
       <div class="list-group">
         <p>Vous pouvez consulter vos pronostiques déjà réalisés</p>
-        <ul>
-          <li *ngFor="let elem of pronoService.pronosDone">
-              <app-prono [prono]="elem"></app-prono>
+        <ul class="list-group">
+          <li *ngFor="let elem of pronoService.pronosDone" class="list-group-item">
+              <app-prono-done [prono]="elem"></app-prono-done>
           </li>
         </ul>
       </div>

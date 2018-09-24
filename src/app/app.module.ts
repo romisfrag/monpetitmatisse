@@ -17,6 +17,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { PronoService } from './services/prono.service';
 import { PropositionComponent } from './pronostiques/proposition/proposition.component';
 import { ListePronoDoneComponent } from './pronostiques/liste-prono-done/liste-prono-done.component';
+import { PronoDoneComponent } from './pronostiques/prono-done/prono-done.component';
 
 
 
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     PronoComponent,
     AccueilComponent,
     PropositionComponent,
-    ListePronoDoneComponent
+    ListePronoDoneComponent,
+    PronoDoneComponent
   ],
   imports: [
     BrowserModule,

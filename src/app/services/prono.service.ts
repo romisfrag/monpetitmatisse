@@ -29,6 +29,7 @@ export class PronoService {
     Premier parametre permet de dire sur quel type d'évenements on souhaite mettre à jour (value pour le changement de valeur)
     le second c'est la fonction de callBack appelé à chaque triger de l'event */
     dbPronoRef.on('value', snap => {
+      this.pronosDone = [];
       this.pronos = snap.val();
       this.retirePronoDone();
       this.backupList = snap.val();
@@ -43,8 +44,12 @@ export class PronoService {
       for (const prop of p.propositions) {
         for (const vot of prop.voteurs) {
           if (user === vot) {
+            console.log('dans le if');
+            console.log(this.pronos);
+            console.log(this.pronosDone);
             this.pronosDone.push(p);
             this.deletePronoIndex(i);
+            this.retirePronoDone();
             return;
           }
         }
