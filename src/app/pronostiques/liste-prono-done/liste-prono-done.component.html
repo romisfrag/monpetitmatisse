@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12">
+      <h2>Vos Pronos</h2>
+      <div class="list-group">
+        <p>Vous pouvez consulter vos pronostiques déjà réalisés</p>
+        <ul>
+          <li *ngFor="let elem of pronoService.pronosDone">
+              <app-prono [prono]="elem"></app-prono>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

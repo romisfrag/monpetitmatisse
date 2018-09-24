@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12">
+      <h2>Vos Pronos</h2>
+      <div class="list-group">
+        <p>Voici les pronostiques qu'il vous reste à faire</p>
+        <ul>
+          <li *ngFor="let elem of pronoService.pronos">
+              <app-prono [prono]="elem" (changeProno)="onChangeProno($event)"></app-prono>
+          </li>
+        </ul>
+        <!-- <p>Les pronos arrivent le 25 septembre</p> -->
+      </div>
+    </div>
+  </div>
